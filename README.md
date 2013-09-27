@@ -8,10 +8,6 @@ This plugin lets you easily convert WAV audio into M4A audio. It is useful when 
 
 ## Using the Plugin ##
 
-See demo project in /XcodeDemo folder the includes first recording and the compressing a file as well as tips for uploading.
-
-## Using the Plugin ##
-
 The plugin creates a function at window.encodeAudio(originalSrc, success, fail) method.
  * originalSrc: (required) This is a string path to the local file to encode. This is typically the fullPath property of the entry passed to the success of a fileSystem.root.getFile call
  * success: (required) This function is called when the encoding has completed successfully. It will be called with the new m4ASource 
@@ -31,14 +27,15 @@ Example:
 			console.log(statusCode);
 		}
 
+See demo code for more details
+
 ## Adding the Plugin to your project ##
 
-1. This plug in has been tested with Cordova/PhoneGap 2.1.0 and currently only supports iOS - has been tested on 5.1 and 6.0
+1. This plug in has been tested with Cordova/PhoneGap 2.1.0 and currently only supports iOS - has been tested on 5.1, 6.0, 6.1 & 7.0
 2. Add the .h and .m files to your Plugins folder in your project.
 3. Add the .js files to your "www" folder on disk, and add reference(s) to the .js files in your html file(s).
 4. Go to Cordova.plist under Resources in Xcode - Under Plugins dictionalty add AudioEncode:AudioEncode
 
-See demo for example
 
 ## LICENSE ##
 
