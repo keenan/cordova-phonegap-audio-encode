@@ -37,6 +37,8 @@
             // for example, an interruption like a phone call comming in
             // make sure and handle this case appropriately
             NSLog(@"AVAssetExportSessionStatusFailed");
+            NSLog(@"   error: %@", exportSession.error);
+            
             [self performSelectorOnMainThread:@selector(doFailCallback:) withObject:[NSString stringWithFormat:@"%i", exportSession.status] waitUntilDone:NO];
             
         } else {
@@ -44,14 +46,13 @@
         }
         
         [exportSession release];
+        
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        NSError *error = noErr;
+        if ([fileMgr removeItemAtPath:audioPath error:&error] != YES) {
+            NSLog(@"Unable to delete file: %@", [error localizedDescription]);
+        }
     }];
-    
-	
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    NSError *error = noErr;
-	if ([fileMgr removeItemAtPath:audioPath error:&error] != YES) {
-		NSLog(@"Unable to delete file: %@", [error localizedDescription]);
-    }
 }
 
 -(void) doSuccessCallback:(NSString*)path {
@@ -66,13 +67,13 @@
 
 -(void) doFailCallback:(NSString*)status {
     NSLog(@"doing fail callback");
-
+    
     CDVPluginResult* pluginResult = nil;
     NSString* javaScript = nil;
     
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:status];
     javaScript = [pluginResult toErrorCallbackString:self.callbackId];
-
+    
     [self writeJavascript:javaScript];
 }
 
