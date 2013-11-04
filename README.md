@@ -32,7 +32,7 @@ See demo code for more details
 
 ## Adding the Plugin to your project ##
 
-1. This plug in has been tested with Cordova/PhoneGap 2.1.0 and currently only supports iOS - has been tested on 5.1, 6.0, 6.1 & 7.0
+1. This plug in has been tested with Cordova/PhoneGap 2.1.0, 3.1.0 and currently only supports iOS - has been tested on 5.1, 6.0, 6.1 & 7.0
 2. Add the .h and .m files to your Plugins folder in your project.
 3. Add the .js files to your "www" folder on disk, and add reference(s) to the .js files in your html file(s).
 4. Go to Cordova.plist under Resources in Xcode - Under Plugins dictionalty add AudioEncode:AudioEncode
