@@ -38,9 +38,9 @@ See demo code for more details
 4. Go to Cordova.plist under Resources in Xcode - Under Plugins dictionalty add AudioEncode:AudioEncode
 5. Or in Cordova 3.0+ add to your config.xml 
 
-	<feature name="AudioEncode">
-		<param name="ios-package" value="AudioEncode" />
-	</feature>
+		<feature name="AudioEncode">
+			<param name="ios-package" value="AudioEncode" />
+		</feature>
 
 
 
