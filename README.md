@@ -1,6 +1,7 @@
 ## PhoneGap AudioEncode Plugin ##
  * by Lyle Pratt
  * Updated Oct 2012 by Keenan Wyrobek for Cordova 2.1.0
+ * Updated November 2013 by John Croucher for Cordova 3.0
 
 ## About this Plugin ##
 
