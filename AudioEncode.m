@@ -3,6 +3,7 @@
 //
 //  By Lyle Pratt, September 2011.
 //    Updated Oct 2012 by Keenan Wyrobek for Cordova 2.1.0
+//    Updated November 2013 by John Croucher for Cordova 3.0
 //  MIT licensed
 //
 
@@ -12,10 +13,10 @@
 
 @synthesize callbackId;
 
-- (void)encodeAudio:(NSArray*)arguments withDict:(NSDictionary*)options
+- (void)encodeAudio:(CDVInvokedUrlCommand *)command
 {
-    self.callbackId = [arguments objectAtIndex:0];
-	NSString* audioPath = [arguments objectAtIndex:1];
+	self.callbackId = command.callbackId;
+	NSString* audioPath = [command.arguments objectAtIndex:0];
     
 	NSURL* audioURL = [NSURL fileURLWithPath:audioPath];
 	AVURLAsset* audioAsset = [[AVURLAsset alloc] initWithURL:audioURL options:nil];
@@ -45,10 +46,9 @@
             NSLog(@"Export Session Status: %d", exportSession.status);
         }
         
-        [exportSession release];
-        
+
         NSFileManager *fileMgr = [NSFileManager defaultManager];
-        NSError *error = noErr;
+        NSError *error;
         if ([fileMgr removeItemAtPath:audioPath error:&error] != YES) {
             NSLog(@"Unable to delete file: %@", [error localizedDescription]);
         }
