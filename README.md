@@ -36,6 +36,12 @@ See demo code for more details
 2. Add the .h and .m files to your Plugins folder in your project.
 3. Add the .js files to your "www" folder on disk, and add reference(s) to the .js files in your html file(s).
 4. Go to Cordova.plist under Resources in Xcode - Under Plugins dictionalty add AudioEncode:AudioEncode
+5. Or in Cordova 3.0+ add to your config.xml 
+
+	<feature name="AudioEncode">
+		<param name="ios-package" value="AudioEncode" />
+	</feature>
+
 
 
 ## LICENSE ##
