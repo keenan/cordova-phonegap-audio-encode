@@ -4,6 +4,8 @@
  * Updated November 2013 by John Croucher for Cordova 3.0
  * Updated January 2014 by Tomas Krones for Cordova 3.3
 
+## Works with Phonegap/Cordova 3.1.0 3.2.0 3.3.0 ##
+
 ## About this Plugin ##
 
 This plugin lets you easily convert WAV audio into M4A audio. It is useful when using Phonegap's audio capture or media recording functionality. Uploading WAV files on via cellular connections is not advised. M4A encoded files are 1/4 to 1/10 the size.
@@ -37,8 +39,6 @@ This plug in has been tested with Cordova/PhoneGap 3.3.0 and currently only supp
 
 1. Using Phonegap CLI, in terminal navigate to your projects root directory.
 2. run `phonegap local plugin add https://github.com/wootwoot1234/cordova-phonegap-audio-encode.git`
-
-
 
 
 ## LICENSE ##
