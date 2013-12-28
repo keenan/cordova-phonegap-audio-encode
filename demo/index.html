@@ -5,9 +5,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-    <script src="cordova-2.1.0.js"></script>
-    <script src="js/AudioEncode.js"></script>
     <script src="js/jquery-1.8.0.min.js"></script>
+    <script src="cordova.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
@@ -61,7 +60,7 @@
                             $("#encode").click(function(){
                                 var mediaEncoded;
 
-                                window.encodeAudio(
+                                window.plugins.AudioEncode.encodeAudio(
                                     entry.fullPath,
                                     function(encodedFileSrc){
                                         mediaEncoded = new Media(encodedFileSrc, function () { console.log("media Success on word") } );

@@ -11,14 +11,12 @@
         <clobbers target="plugins.AudioEncode" />
     </js-module>
 <platform name="ios">
-
-        <config-file target="config.xml" parent="/*">
-            <feature name="AudioEncode">
-                <param name="ios-package" value="AudioEncode"/>
-            </feature>
-        </config-file>
-        <source-file src="src/ios/AudioEncode.m" />
-        <header-file src="src/ios/AudioEncode.h" />
-
+    <config-file target="config.xml" parent="/*">
+        <feature name="AudioEncode">
+            <param name="ios-package" value="AudioEncode"/>
+        </feature>
+    </config-file>
+    <source-file src="src/ios/AudioEncode.m" />
+    <header-file src="src/ios/AudioEncode.h" />
 </platform>
 </plugin>

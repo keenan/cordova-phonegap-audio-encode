@@ -17,7 +17,7 @@ The plugin creates a function at window.encodeAudio(originalSrc, success, fail) 
 
 Example:
 
-		window.encodeAudio(pathToWavFile, success, fail);
+		window.plugins.AudioEncode.encodeAudio(pathToWavFile, success, fail);
 
 		var success = function(newM4APath) {
 			//Do something with your new encoded audio (upload it?  - see notes in Xcode example)
