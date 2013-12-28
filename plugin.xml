@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="AudioEncode"
+        version="1.0.0">    
+<name>AudioEncode</name>
+<description>Plugin for iOS to encode wav to amr</description>
+<author>Tomas Krones</author>
+<keywords>iOS audio recording encoding</keywords>
+<license>MIT</license>
+    <js-module src="www/audioencode.js" name="AudioEncode">
+        <clobbers target="plugins.AudioEncode" />
+    </js-module>
+<platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="AudioEncode">
+                <param name="ios-package" value="AudioEncode"/>
+            </feature>
+        </config-file>
+        <source-file src="src/ios/AudioEncode.m" />
+        <header-file src="src/ios/AudioEncode.h" />
+
+</platform>
+</plugin>

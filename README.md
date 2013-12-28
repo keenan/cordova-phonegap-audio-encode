@@ -2,6 +2,7 @@
  * by Lyle Pratt
  * Updated Oct 2012 by Keenan Wyrobek for Cordova 2.1.0
  * Updated November 2013 by John Croucher for Cordova 3.0
+ * Updated January 2014 by Tomas Krones for Cordova 3.3
 
 ## About this Plugin ##
 
@@ -32,15 +33,11 @@ See demo code for more details
 
 ## Adding the Plugin to your project ##
 
-1. This plug in has been tested with Cordova/PhoneGap 2.1.0, 3.1.0 and currently only supports iOS - has been tested on 5.1, 6.0, 6.1 & 7.0
-2. Add the .h and .m files to your Plugins folder in your project.
-3. Add the .js files to your "www" folder on disk, and add reference(s) to the .js files in your html file(s).
-4. Go to Cordova.plist under Resources in Xcode - Under Plugins dictionalty add AudioEncode:AudioEncode
-5. Or in Cordova 3.0+ add to your config.xml 
+This plug in has been tested with Cordova/PhoneGap 3.3.0 and currently only supports iOS - has been tested on 5.1, 6.0, 6.1 & 7.0
 
-		<feature name="AudioEncode">
-			<param name="ios-package" value="AudioEncode" />
-		</feature>
+1. Using Phonegap CLI, in terminal navigate to your projects root directory.
+2. run `phonegap local plugin add https://github.com/wootwoot1234/cordova-phonegap-audio-encode.git`
+
 
 
 
