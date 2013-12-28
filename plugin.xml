@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         id="AudioEncode"
-        version="1.0.0">    
+        version="1.0.1">    
 <name>AudioEncode</name>
 <description>Plugin for iOS to encode wav to amr</description>
 <author>Tomas Krones</author>
