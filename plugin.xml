@@ -7,7 +7,7 @@
 <author>Tomas Krones</author>
 <keywords>iOS audio recording encoding</keywords>
 <license>MIT</license>
-    <js-module src="www/audioencode.js" name="AudioEncode">
+    <js-module src="www/AudioEncode.js" name="AudioEncode">
         <clobbers target="plugins.AudioEncode" />
     </js-module>
 <platform name="ios">
