@@ -1,3 +1,7 @@
+## IF YOU WANT TO RECORD DIRECTLY IN COMPRESSED FORMAT READ THIS ##
+
+https://github.com/keenan/cordova-phonegap-audio-encode/issues/4
+
 ## PhoneGap AudioEncode Plugin ##
  * by Lyle Pratt
  * Updated Oct 2012 by Keenan Wyrobek for Cordova 2.1.0
