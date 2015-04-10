@@ -20,7 +20,7 @@ The plugin creates a function at window.encodeAudio(originalSrc, success, fail) 
  * fail: (required) This function is called on encode failure and will be passed a statusCode.
 
 Example:
-        
+        	// Note: cordova.file.documentsDirectory is from the cordova file plugin https://github.com/apache/cordova-plugin-file/
 		var fullPathToWavFile = cordova.file.documentsDirectory + "wavefile.wav";
 		window.plugins.AudioEncode.encodeAudio(fullPathToWavFile, success, fail);
 
