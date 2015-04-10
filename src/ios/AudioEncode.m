@@ -18,7 +18,7 @@
 	self.callbackId = command.callbackId;
 	NSString* audioPath = [command.arguments objectAtIndex:0];
     
-	NSURL* audioURL = [NSURL fileURLWithPath:audioPath];
+	NSURL* audioURL = [NSURL URLWithString:audioPath];
 	AVURLAsset* audioAsset = [[AVURLAsset alloc] initWithURL:audioURL options:nil];
     AVAssetExportSession* exportSession = [[AVAssetExportSession alloc] initWithAsset:audioAsset presetName:AVAssetExportPresetAppleM4A];
 	
@@ -49,7 +49,7 @@
 
         NSFileManager *fileMgr = [NSFileManager defaultManager];
         NSError *error;
-        if ([fileMgr removeItemAtPath:audioPath error:&error] != YES) {
+        if ([fileMgr removeItemAtURL:audioURL error:&error] != YES) {
             NSLog(@"Unable to delete file: %@", [error localizedDescription]);
         }
     }];
