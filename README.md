@@ -42,7 +42,7 @@ See demo code for more details
 This plug in has been tested with Cordova/PhoneGap 4.3 and currently only supports iOS - has been tested on 5.1 - 8.0
 
 1. Using Cordova CLI, in terminal navigate to your projects root directory.
-2. run `cordova plugin add https://github.com/wootwoot1234/cordova-phonegap-audio-encode.git`
+2. run `cordova plugin add https://github.com/wootwoot1234/cordova-audio-encode.git`
 
 
 ## LICENSE ##
